@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 interface HeroProps {
   title: string;
   subtitle: string;
@@ -10,24 +9,18 @@ interface HeroProps {
   image?: string;
   fullHeight?: boolean;
 }
-
-const Hero = ({ 
-  title, 
-  subtitle, 
-  cta = "Läs mer", 
+const Hero = ({
+  title,
+  subtitle,
+  cta = "Läs mer",
   ctaLink = "/contact",
   image = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  fullHeight = false 
+  fullHeight = false
 }: HeroProps) => {
-  return (
-    <div className={`relative ${fullHeight ? 'min-h-[100vh]' : 'min-h-[70vh]'} flex items-center geometric-bg overflow-hidden`}>
+  return <div className={`relative ${fullHeight ? 'min-h-[100vh]' : 'min-h-[70vh]'} flex items-center geometric-bg overflow-hidden`}>
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/60 z-10"></div>
-        <img 
-          src={image} 
-          alt="Hero background" 
-          className="w-full h-full object-cover"
-        />
+        <img src={image} alt="Hero background" className="w-full h-full object-cover" />
       </div>
       
       <div className="absolute inset-0 z-5 opacity-30">
@@ -65,10 +58,7 @@ const Hero = ({
           
           <div className="flex flex-wrap gap-4 fade-up reveal-delay-3">
             <Link to={ctaLink}>
-              <Button 
-                variant="default" 
-                className="bg-orange-600 text-white hover:bg-orange-700 rounded-full px-8 py-6 text-lg shadow-lg"
-              >
+              <Button variant="default" className="bg-orange-600 text-white hover:bg-orange-700 rounded-full px-8 py-6 text-lg shadow-lg">
                 <span className="flex items-center">
                   {cta}
                   <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" size={20} />
@@ -76,11 +66,8 @@ const Hero = ({
               </Button>
             </Link>
             
-            <Button 
-              variant="outline" 
-              className="rounded-full px-8 py-6 text-lg border-2 border-white/50 hover:bg-white/10 text-white"
-            >
-              <span className="flex items-center">Utforska mer</span>
+            <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-2 border-white/50 hover:bg-white/10 text-white">
+              <span className="flex items-center text-zinc-950">Utforska mer</span>
             </Button>
           </div>
         </div>
@@ -89,8 +76,6 @@ const Hero = ({
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white z-20 animate-bounce">
         <ChevronDown size={24} />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
