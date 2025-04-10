@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,7 +21,7 @@ const Hero = ({
   return <div className={`relative ${fullHeight ? 'min-h-[100vh]' : 'min-h-[70vh]'} flex items-center geometric-bg overflow-hidden`}>
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/60 z-10"></div>
-        <img src={image} alt="Hero background" className="w-full h-full object-cover" />
+        <img src={image} alt="Hero bakgrund" className="w-full h-full object-cover" />
       </div>
       
       <div className="absolute inset-0 z-5 opacity-30">

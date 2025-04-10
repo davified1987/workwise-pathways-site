@@ -10,8 +10,8 @@ const About = () => {
       
       <main>
         <Hero 
-          title="About WorkWise"
-          subtitle="Learn about our mission, values, and the team behind our success."
+          title="Om RE:SHIFT"
+          subtitle="Lär dig om vårt uppdrag, våra värderingar och teamet bakom vår framgång."
           image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
         />
         
@@ -20,26 +20,26 @@ const About = () => {
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="mb-6">Our Mission & Vision</h2>
+                <h2 className="mb-6">Vårt uppdrag & vision</h2>
                 <div className="space-y-6 text-gray-600">
                   <p>
-                    <strong className="text-brand-700">Our Mission:</strong> To create sustainable pathways to employment by connecting individuals with meaningful work and helping organizations build resilient workforces.
+                    <strong className="text-brand-700">Vårt uppdrag:</strong> Att skapa hållbara vägar till anställning genom att koppla ihop individer med meningsfullt arbete och hjälpa organisationer att bygga motståndskraftiga arbetsstyrkor.
                   </p>
                   <p>
-                    <strong className="text-brand-700">Our Vision:</strong> A labor market where every person has the opportunity to reach their full potential, and organizations have access to the talent they need to thrive.
+                    <strong className="text-brand-700">Vår vision:</strong> En arbetsmarknad där varje person har möjlighet att nå sin fulla potential, och organisationer har tillgång till den talang de behöver för att utvecklas.
                   </p>
                   <p>
-                    Since our founding in 2008, WorkWise has been dedicated to addressing the complex challenges of the modern labor market. We've grown from a small consultancy to a nationwide provider of comprehensive employment solutions.
+                    Sedan vår grundande 2008 har RE:SHIFT varit dedikerade till att ta itu med de komplexa utmaningarna på den moderna arbetsmarknaden. Vi har vuxit från en liten konsultfirma till en nationell leverantör av omfattande sysselsättningslösningar.
                   </p>
                   <p>
-                    Our approach combines deep expertise in labor market dynamics with a genuine commitment to the success of both individuals and organizations. We believe that the right match between talent and opportunity creates lasting value for all parties involved.
+                    Vårt tillvägagångssätt kombinerar djup expertis i arbetsmarknadsdynamik med ett genuint engagemang för både individers och organisationers framgång. Vi tror att rätt matchning mellan talang och möjligheter skapar bestående värde för alla inblandade parter.
                   </p>
                 </div>
               </div>
               <div>
                 <img 
                   src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                  alt="Our mission and vision" 
+                  alt="Vårt uppdrag och vision" 
                   className="rounded-lg shadow-md"
                 />
               </div>
@@ -51,26 +51,26 @@ const About = () => {
         <section className="section-padding bg-gray-50">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <h2 className="mb-4">Our Core Values</h2>
+              <h2 className="mb-4">Våra kärnvärden</h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-                These principles guide our work and relationships with clients, partners, and each other.
+                Dessa principer vägleder vårt arbete och relationer med klienter, partners och varandra.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Value 1 */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-brand-700">Integrity</h3>
+                <h3 className="text-xl font-bold mb-3 text-brand-700">Integritet</h3>
                 <p className="text-gray-600">
-                  We maintain the highest ethical standards in all our actions, prioritizing honesty, transparency, and fairness in every interaction.
+                  Vi upprätthåller de högsta etiska standarderna i alla våra handlingar, prioriterar ärlighet, transparens och rättvisa i varje interaktion.
                 </p>
               </div>
               
               {/* Value 2 */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-brand-700">Empowerment</h3>
+                <h3 className="text-xl font-bold mb-3 text-brand-700">Egenmakt</h3>
                 <p className="text-gray-600">
-                  We believe in providing individuals with the tools, knowledge, and support they need to take control of their career development.
+                  Vi tror på att ge individer de verktyg, kunskaper och det stöd de behöver för att ta kontroll över sin karriärutveckling.
                 </p>
               </div>
               
@@ -78,31 +78,31 @@ const About = () => {
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-brand-700">Innovation</h3>
                 <p className="text-gray-600">
-                  We continuously seek better ways to address labor market challenges, embracing new ideas and approaches to create effective solutions.
+                  Vi söker kontinuerligt bättre sätt att ta itu med arbetsmarknadsutmaningar och omfamnar nya idéer och metoder för att skapa effektiva lösningar.
                 </p>
               </div>
               
               {/* Value 4 */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-brand-700">Collaboration</h3>
+                <h3 className="text-xl font-bold mb-3 text-brand-700">Samarbete</h3>
                 <p className="text-gray-600">
-                  We work together with clients, partners, and communities to develop solutions that address complex employment challenges.
+                  Vi samarbetar med klienter, partners och samhällen för att utveckla lösningar som adresserar komplexa sysselsättningsutmaningar.
                 </p>
               </div>
               
               {/* Value 5 */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-brand-700">Inclusivity</h3>
+                <h3 className="text-xl font-bold mb-3 text-brand-700">Inkludering</h3>
                 <p className="text-gray-600">
-                  We are committed to creating opportunities for all individuals, regardless of background or circumstance, and celebrating diversity in the workplace.
+                  Vi är engagerade i att skapa möjligheter för alla individer, oavsett bakgrund eller omständighet, och att fira mångfald på arbetsplatsen.
                 </p>
               </div>
               
               {/* Value 6 */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-brand-700">Impact</h3>
+                <h3 className="text-xl font-bold mb-3 text-brand-700">Påverkan</h3>
                 <p className="text-gray-600">
-                  We measure our success by the positive difference we make in the lives of individuals and the performance of organizations we support.
+                  Vi mäter vår framgång genom den positiva skillnad vi gör i individers liv och prestanda hos organisationer vi stödjer.
                 </p>
               </div>
             </div>
@@ -113,9 +113,9 @@ const About = () => {
         <section className="section-padding">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <h2 className="mb-4">Our Leadership Team</h2>
+              <h2 className="mb-4">Vårt ledarteam</h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-                Meet the experienced professionals who guide our organization and drive our mission forward.
+                Möt de erfarna proffsen som vägleder vår organisation och driver vårt uppdrag framåt.
               </p>
             </div>
             
@@ -130,9 +130,9 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold">Emma Lindberg</h3>
-                <p className="text-brand-700 mb-2">CEO & Founder</p>
+                <p className="text-brand-700 mb-2">VD & Grundare</p>
                 <p className="text-gray-600">
-                  With over 20 years of experience in employment services, Emma founded WorkWise with a vision for a more effective approach to labor market challenges.
+                  Med över 20 års erfarenhet av arbetsmarknadstjänster grundade Emma RE:SHIFT med en vision om en mer effektiv metod för arbetsmarknadsutmaningar.
                 </p>
               </div>
               
@@ -146,9 +146,9 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold">Johan Svensson</h3>
-                <p className="text-brand-700 mb-2">Chief Operations Officer</p>
+                <p className="text-brand-700 mb-2">Operativ chef</p>
                 <p className="text-gray-600">
-                  Johan brings expertise in organizational development and strategic planning to ensure our services deliver maximum impact.
+                  Johan bidrar med expertis inom organisationsutveckling och strategisk planering för att säkerställa att våra tjänster levererar maximal effekt.
                 </p>
               </div>
               
@@ -162,9 +162,9 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold">Sara Nordström</h3>
-                <p className="text-brand-700 mb-2">Director of Employment Services</p>
+                <p className="text-brand-700 mb-2">Chef för arbetsmarknadsinsatser</p>
                 <p className="text-gray-600">
-                  Sara leads our employment programs with deep insight into labor market trends and effective job-matching methodologies.
+                  Sara leder våra sysselsättningsprogram med djup insikt i arbetsmarknadstrender och effektiva jobbmatchningsmetoder.
                 </p>
               </div>
               
@@ -178,9 +178,9 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold">Marcus Andersson</h3>
-                <p className="text-brand-700 mb-2">Head of Corporate Partnerships</p>
+                <p className="text-brand-700 mb-2">Chef för företagspartnerskap</p>
                 <p className="text-gray-600">
-                  Marcus develops and maintains our relationships with employer partners, creating pathways for job seekers to find meaningful work.
+                  Marcus utvecklar och upprätthåller våra relationer med arbetsgivarpartners, vilket skapar vägar för arbetssökande att hitta meningsfullt arbete.
                 </p>
               </div>
             </div>
@@ -191,9 +191,9 @@ const About = () => {
         <section className="section-padding bg-gray-50">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <h2 className="mb-4">Our Journey</h2>
+              <h2 className="mb-4">Vår resa</h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-                From our founding to the present day, we've continuously evolved to meet the changing needs of the labor market.
+                Från vår grundande till idag har vi kontinuerligt utvecklats för att möta arbetsmarknadens förändrade behov.
               </p>
             </div>
             
@@ -209,9 +209,9 @@ const About = () => {
                   </div>
                 </div>
                 <div className="md:col-span-3">
-                  <h3 className="text-xl font-bold mb-2">Founding</h3>
+                  <h3 className="text-xl font-bold mb-2">Grundande</h3>
                   <p className="text-gray-600">
-                    WorkWise was founded in Stockholm with a small team dedicated to improving employment services through a more personalized approach.
+                    RE:SHIFT grundades i Stockholm med ett litet team dedikerat till att förbättra arbetsmarknadstjänster genom en mer personlig metod.
                   </p>
                 </div>
               </div>
@@ -229,7 +229,7 @@ const About = () => {
                 <div className="md:col-span-3">
                   <h3 className="text-xl font-bold mb-2">Expansion</h3>
                   <p className="text-gray-600">
-                    We opened offices in Gothenburg and Malmö, expanding our capacity to serve job seekers and employers across southern Sweden.
+                    Vi öppnade kontor i Göteborg och Malmö, vilket utökade vår kapacitet att betjäna arbetssökande och arbetsgivare i hela södra Sverige.
                   </p>
                 </div>
               </div>
@@ -247,7 +247,7 @@ const About = () => {
                 <div className="md:col-span-3">
                   <h3 className="text-xl font-bold mb-2">Innovation</h3>
                   <p className="text-gray-600">
-                    Launched our pioneering Rusta & Matcha program, setting a new standard for employment services in Sweden.
+                    Lanserade vårt banbrytande Rusta & Matcha-program, vilket satte en ny standard för arbetsmarknadstjänster i Sverige.
                   </p>
                 </div>
               </div>
@@ -263,9 +263,9 @@ const About = () => {
                   </div>
                 </div>
                 <div className="md:col-span-3">
-                  <h3 className="text-xl font-bold mb-2">Growth</h3>
+                  <h3 className="text-xl font-bold mb-2">Tillväxt</h3>
                   <p className="text-gray-600">
-                    Opened offices in Uppsala, Linköping, and Umeå, achieving nationwide coverage and serving thousands of clients annually.
+                    Öppnade kontor i Uppsala, Linköping och Umeå, uppnådde nationell täckning och betjänar tusentals klienter årligen.
                   </p>
                 </div>
               </div>
@@ -273,7 +273,7 @@ const About = () => {
               {/* Timeline Item 5 */}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
                 <div className="md:col-span-1 text-center md:text-right">
-                  <span className="text-brand-700 font-bold text-xl">Today</span>
+                  <span className="text-brand-700 font-bold text-xl">Idag</span>
                 </div>
                 <div className="hidden md:block md:col-span-1 justify-self-center h-full">
                   <div className="h-full w-px bg-brand-200 relative">
@@ -281,9 +281,9 @@ const About = () => {
                   </div>
                 </div>
                 <div className="md:col-span-3">
-                  <h3 className="text-xl font-bold mb-2">Present Day</h3>
+                  <h3 className="text-xl font-bold mb-2">Nutid</h3>
                   <p className="text-gray-600">
-                    WorkWise continues to evolve and innovate, developing new approaches to meet the challenges of a rapidly changing labor market.
+                    RE:SHIFT fortsätter att utvecklas och innovera, utvecklar nya metoder för att möta utmaningarna på en snabbt föränderlig arbetsmarknad.
                   </p>
                 </div>
               </div>

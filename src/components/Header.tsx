@@ -31,8 +31,8 @@ const Header = () => {
     { name: 'Hem', path: '/' },
     { name: 'Tjänster', path: '/transition' },
     { name: 'Platser', path: '/offices' },
-    { name: 'Om', path: '/about' },
-    { name: 'FAQ', path: '/faq' },
+    { name: 'Om oss', path: '/about' },
+    { name: 'Vanliga frågor', path: '/faq' },
     { name: 'Kontakt', path: '/contact' },
   ];
 
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="flex items-center">
             <button 
               onClick={toggleMenu}
-              aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
+              aria-label={isMenuOpen ? 'Stäng meny' : 'Öppna meny'}
               className="p-2"
             >
               {isMenuOpen ? <X size={24} className="text-orange-600" /> : <Menu size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />}

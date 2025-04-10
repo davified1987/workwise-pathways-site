@@ -7,7 +7,7 @@ import OfficeLocation from '@/components/OfficeLocation';
 const Offices = () => {
   const offices = [
     {
-      name: "Stockholm (Headquarters)",
+      name: "Stockholm (Huvudkontor)",
       address: "Sveavägen 123",
       city: "11346 Stockholm",
       phone: "+46 8 123 4567",
@@ -15,9 +15,9 @@ const Offices = () => {
       imageUrl: "https://images.unsplash.com/photo-1508189860359-777d945909ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
     },
     {
-      name: "Gothenburg",
+      name: "Göteborg",
       address: "Avenyn 45",
-      city: "41103 Gothenburg",
+      city: "41103 Göteborg",
       phone: "+46 31 987 6543",
       email: "gothenburg@workwise.com",
       imageUrl: "https://images.unsplash.com/photo-1566807387450-b74aea0e727e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
@@ -62,8 +62,8 @@ const Offices = () => {
       
       <main>
         <Hero 
-          title="Our Offices"
-          subtitle="Visit us at one of our locations across Sweden to discuss how we can help with your employment needs."
+          title="Våra kontor"
+          subtitle="Besök oss på något av våra kontor i Sverige för att diskutera hur vi kan hjälpa dig med dina anställningsbehov."
           image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
         />
         
@@ -71,10 +71,10 @@ const Offices = () => {
         <section className="section-padding bg-gray-50">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="mb-4">Find Us Near You</h2>
+              <h2 className="mb-4">Hitta oss nära dig</h2>
               <p className="text-gray-600 text-lg">
-                With six offices strategically located across Sweden, we're never far away. 
-                Visit us to discuss your employment needs in person or reach out via phone or email.
+                Med sex kontor strategiskt placerade över hela Sverige är vi aldrig långt borta. 
+                Besök oss för att diskutera dina anställningsbehov personligen eller kontakta oss via telefon eller e-post.
               </p>
             </div>
             
@@ -99,15 +99,15 @@ const Offices = () => {
           <div className="container-custom">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
               <div className="text-center mb-8">
-                <h2 className="mb-4">Our National Presence</h2>
+                <h2 className="mb-4">Vår nationella närvaro</h2>
                 <p className="text-gray-600 max-w-3xl mx-auto">
-                  With locations throughout Sweden, we're well-positioned to serve clients nationwide.
+                  Med kontor över hela Sverige är vi väl positionerade för att betjäna kunder i hela landet.
                 </p>
               </div>
               
               {/* This would be replaced with an actual map in a real implementation */}
               <div className="bg-gray-200 rounded-lg h-[500px] flex items-center justify-center">
-                <p className="text-gray-600 text-lg">Interactive map would be displayed here</p>
+                <p className="text-gray-600 text-lg">Interaktiv karta skulle visas här</p>
               </div>
             </div>
           </div>
