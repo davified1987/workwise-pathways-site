@@ -13,25 +13,29 @@ const Index = () => {
       title: "Career Transition",
       description: "Comprehensive support to prepare job seekers for employment and matching with suitable opportunities.",
       icon: <Users size={32} />,
-      link: "/transition"
+      link: "/transition",
+      imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80"
     },
     {
       title: "Market Projects",
       description: "Tailored programs designed to address specific workforce needs and labor market challenges.",
       icon: <Briefcase size={32} />,
-      link: "/transition"
+      link: "/transition",
+      imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80"
     },
     {
       title: "Career Guidance",
       description: "Expert guidance to help individuals navigate career choices and professional development paths.",
       icon: <LineChart size={32} />,
-      link: "/transition"
+      link: "/transition",
+      imageUrl: "https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
     },
     {
       title: "Outplacement",
       description: "Supportive transition services for organizations and employees during workforce changes.",
       icon: <FileQuestion size={32} />,
-      link: "/transition"
+      link: "/transition",
+      imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
     }
   ];
 
@@ -45,19 +49,14 @@ const Index = () => {
           subtitle="We help individuals and organizations navigate transitions and build brighter futures through innovative employment solutions and strategic guidance."
           cta="Explore Our Services"
           ctaLink="/transition"
+          image="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
           fullHeight={true}
         />
         
         {/* Services Section */}
         <section className="section-padding relative overflow-hidden">
           {/* Background pattern */}
-          <div className="absolute inset-0 z-0 opacity-5">
-            <img 
-              src="public/lovable-uploads/845f639d-dba8-4eea-abb0-48844e038e8b.png" 
-              alt="" 
-              className="absolute top-0 w-full h-full object-cover"
-            />
-          </div>
+          <div className="absolute inset-0 z-0 pattern-dots"></div>
           
           <div className="container-custom relative z-10">
             <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -76,6 +75,7 @@ const Index = () => {
                   description={service.description}
                   icon={service.icon}
                   link={service.link}
+                  imageUrl={service.imageUrl}
                 />
               ))}
             </div>
@@ -86,25 +86,24 @@ const Index = () => {
         <section className="section-padding relative bg-gray-50 overflow-hidden">
           {/* Geometric accent */}
           <div className="absolute right-0 top-0 w-1/3 h-full opacity-10">
-            <img 
-              src="public/lovable-uploads/a25b7afc-2085-42d0-8e2f-c1cdf5b8db1a.png" 
-              alt="" 
-              className="h-full w-full object-cover object-left"
-            />
+            <svg className="h-full w-full" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0,0 L400,0 L400,800 L200,600 L0,800 Z" fill="rgba(239, 100, 0, 0.2)" />
+              <path d="M150,400 L400,150 L400,0 L0,0 L0,150 Z" fill="rgba(255, 61, 97, 0.15)" />
+            </svg>
           </div>
           
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-xl relative z-10">
+                <div className="rounded-2xl overflow-hidden shadow-xl relative z-10 image-reveal">
                   <img 
-                    src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                    src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
                     alt="About RE:SHIFT" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Decorative elements */}
-                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-500 rounded-lg z-0"></div>
+                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-500 rounded-lg z-0 blob-animation"></div>
                 <div className="absolute -top-6 -right-6 w-32 h-32 border-2 border-orange-300 rounded-lg z-0"></div>
               </div>
               
@@ -154,13 +153,7 @@ const Index = () => {
         {/* Success Stories Section */}
         <section className="section-padding relative overflow-hidden">
           {/* Background pattern */}
-          <div className="absolute inset-0 z-0 opacity-5">
-            <img 
-              src="public/lovable-uploads/1a2dc181-0c95-4b1d-8e96-1c3aadcdeae5.png" 
-              alt="" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <div className="absolute inset-0 z-0 pattern-dots"></div>
           
           <div className="container-custom relative z-10">
             <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -186,6 +179,7 @@ const Index = () => {
                 </blockquote>
                 <div className="font-semibold text-gray-900">Anna, Software Developer</div>
                 <div className="text-sm text-gray-500">Stockholm, Sweden</div>
+                <div className="mt-4 h-1 w-20 bg-gradient-to-r from-orange-300 to-red-300"></div>
               </div>
               
               {/* Success Story 2 */}
@@ -202,6 +196,7 @@ const Index = () => {
                 </blockquote>
                 <div className="font-semibold text-gray-900">Marcus, Marketing Manager</div>
                 <div className="text-sm text-gray-500">Gothenburg, Sweden</div>
+                <div className="mt-4 h-1 w-20 bg-gradient-to-r from-orange-300 to-red-300"></div>
               </div>
               
               {/* Success Story 3 */}
@@ -218,6 +213,7 @@ const Index = () => {
                 </blockquote>
                 <div className="font-semibold text-gray-900">Lena, HR Director</div>
                 <div className="text-sm text-gray-500">Malmö, Sweden</div>
+                <div className="mt-4 h-1 w-20 bg-gradient-to-r from-orange-300 to-red-300"></div>
               </div>
             </div>
             
@@ -234,13 +230,14 @@ const Index = () => {
         {/* CTA Section */}
         <section className="orange-gradient text-white py-20 relative overflow-hidden">
           {/* Geometric pattern overlay */}
-          <div className="absolute inset-0 opacity-10">
-            <img 
-              src="public/lovable-uploads/c9280494-6eef-4e95-a091-2921d13953b3.png" 
-              alt="" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <circle cx="500" cy="300" r="200" stroke="white" strokeWidth="2" fill="none" opacity="0.4" />
+            <circle cx="500" cy="300" r="300" stroke="white" strokeWidth="2" fill="none" opacity="0.2" />
+          </svg>
           
           <div className="container-custom text-center relative z-10">
             <div className="max-w-3xl mx-auto">

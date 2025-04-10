@@ -33,20 +33,22 @@ const Hero = ({
       </div>
       
       {/* Geometric patterns */}
-      <div className="absolute inset-0 z-5 opacity-50">
+      <div className="absolute inset-0 z-5 opacity-30">
         <div className="absolute top-0 right-0 w-full h-full">
-          <img 
-            src="public/lovable-uploads/b720c1ce-c6bd-4e0e-b9e5-cf46d1e5cbd9.png" 
-            alt="" 
-            className="absolute top-0 right-0 w-1/2 h-full object-contain object-right opacity-20"
-          />
+          <svg className="absolute top-0 right-0 h-full w-full opacity-20" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="400" cy="400" r="200" fill="none" stroke="rgba(255,138,0,0.3)" strokeWidth="4" />
+            <path d="M200,400 L600,400" stroke="rgba(255,61,97,0.4)" strokeWidth="4" />
+            <path d="M400,200 L400,600" stroke="rgba(255,61,97,0.4)" strokeWidth="4" />
+            <path d="M300,300 L500,500" stroke="rgba(255,138,0,0.3)" strokeWidth="4" />
+            <path d="M500,300 L300,500" stroke="rgba(255,138,0,0.3)" strokeWidth="4" />
+          </svg>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-full">
-          <img 
-            src="public/lovable-uploads/326435a3-3dd9-4426-918b-d65e3fc78e2d.png" 
-            alt="" 
-            className="absolute bottom-0 left-0 w-1/2 h-1/2 object-contain object-left-bottom opacity-20"
-          />
+          <svg className="absolute bottom-0 left-0 h-1/2 w-1/2 opacity-20" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <rect x="50" y="50" width="300" height="300" fill="none" stroke="rgba(255,138,0,0.3)" strokeWidth="4" />
+            <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(255,61,97,0.4)" strokeWidth="4" />
+            <polygon points="200,100 250,175 325,175 275,250 300,325 200,275 100,325 125,250 75,175 150,175" fill="none" stroke="rgba(255,138,0,0.3)" strokeWidth="2" />
+          </svg>
         </div>
       </div>
       

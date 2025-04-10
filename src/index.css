@@ -122,7 +122,7 @@
 
   .geometric-bg::before {
     @apply content-[''] absolute top-0 right-0 w-full md:w-2/3 h-full bg-contain bg-no-repeat bg-right z-[-1] opacity-20;
-    background-image: url('public/lovable-uploads/d950bb48-0e6b-4f48-a1e5-ff1d248028fc.png');
+    background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M400 0L800 400L400 800L0 400L400 0Z' fill='%23FF8A00' fill-opacity='0.3'/%3E%3Cpath d='M600 200L400 0L200 200L400 400L600 200Z' fill='%23FF3D61' fill-opacity='0.3'/%3E%3Cpath d='M600 600L800 400L600 200L400 400L600 600Z' fill='%23FF8A00' fill-opacity='0.3'/%3E%3Cpath d='M200 600L400 800L600 600L400 400L200 600Z' fill='%23FF3D61' fill-opacity='0.3'/%3E%3Cpath d='M0 400L200 600L400 400L200 200L0 400Z' fill='%23FF8A00' fill-opacity='0.3'/%3E%3C/svg%3E");
   }
 
   .geometric-bottom {
@@ -131,7 +131,7 @@
 
   .geometric-bottom::after {
     @apply content-[''] absolute bottom-0 left-0 w-full md:w-2/3 h-full bg-contain bg-no-repeat bg-left-bottom z-[-1] opacity-20;
-    background-image: url('public/lovable-uploads/8ce8c351-87cc-4cf1-8745-d7dd8c4d2dd1.png');
+    background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='400' cy='400' r='300' stroke='%23FF8A00' stroke-opacity='0.4' stroke-width='4'/%3E%3Ccircle cx='400' cy='400' r='200' stroke='%23FF3D61' stroke-opacity='0.4' stroke-width='4'/%3E%3Ccircle cx='400' cy='400' r='100' stroke='%23FF8A00' stroke-opacity='0.4' stroke-width='4'/%3E%3C/svg%3E");
   }
 
   .clip-path-wave {
@@ -184,5 +184,24 @@
 
   .card {
     @apply overflow-hidden rounded-2xl border border-gray-100 transition-all hover:-translate-y-1 hover:shadow-xl;
+  }
+  
+  .image-reveal {
+    @apply overflow-hidden;
+  }
+  
+  .image-reveal img {
+    @apply transition-transform duration-700 hover:scale-110;
+  }
+  
+  .pattern-dots {
+    @apply relative;
+    background-image: radial-gradient(rgba(239, 100, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .split-image-container {
+    @apply relative overflow-hidden rounded-2xl;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
 }
