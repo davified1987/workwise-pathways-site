@@ -1,16 +1,31 @@
 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
+  const location = useLocation();
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -21,10 +36,14 @@ const Header = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
-    <header className="py-4 border-b border-gray-100 bg-white sticky top-0 z-50">
+    <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex justify-between items-center">
-        <Link to="/" className="font-bold text-2xl text-brand-700">WorkWise</Link>
+        <Link to="/" className="font-bold text-2xl text-brand-600">WorkWise</Link>
         
         {isMobile ? (
           <div className="flex items-center">
@@ -37,33 +56,36 @@ const Header = () => {
             </button>
 
             {isMenuOpen && (
-              <div className="fixed inset-0 top-[65px] bg-white z-40 p-4">
-                <nav className="flex flex-col space-y-4">
+              <div className="fixed inset-0 top-[65px] bg-white/95 backdrop-blur-md z-40 p-6 animate-fade-in">
+                <nav className="flex flex-col space-y-6">
                   {navItems.map((item) => (
                     <Link 
                       key={item.name}
                       to={item.path}
-                      className="py-2 text-lg border-b border-gray-100"
+                      className={`py-2 text-lg font-medium ${isActive(item.path) ? 'text-brand-600' : 'text-gray-800'}`}
                       onClick={closeMenu}
                     >
                       {item.name}
                     </Link>
                   ))}
-                  <Button className="btn-primary w-full mt-4">Contact Us</Button>
+                  <Link to="/contact" onClick={closeMenu}>
+                    <Button className="btn-primary w-full mt-6">Contact Us</Button>
+                  </Link>
                 </nav>
               </div>
             )}
           </div>
         ) : (
-          <div className="flex items-center space-x-6">
-            <nav className="flex space-x-6">
+          <div className="flex items-center space-x-8">
+            <nav className="flex space-x-8">
               {navItems.map((item) => (
                 <Link 
                   key={item.name}
                   to={item.path}
-                  className="py-2 hover:text-brand-600 transition-colors"
+                  className={`py-2 relative font-medium group ${isActive(item.path) ? 'text-brand-600' : isScrolled ? 'text-gray-800' : 'text-white'}`}
                 >
                   {item.name}
+                  <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
                 </Link>
               ))}
             </nav>

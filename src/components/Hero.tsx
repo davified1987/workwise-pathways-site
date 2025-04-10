@@ -21,10 +21,10 @@ const Hero = ({
   fullHeight = false 
 }: HeroProps) => {
   return (
-    <div className={`relative ${fullHeight ? 'min-h-[80vh]' : 'min-h-[60vh]'} flex items-center`}>
+    <div className={`relative ${fullHeight ? 'min-h-[90vh]' : 'min-h-[60vh]'} flex items-center`}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10"></div>
         <img 
           src={image} 
           alt="Hero background" 
@@ -34,15 +34,15 @@ const Hero = ({
       
       {/* Content */}
       <div className="container-custom relative z-20 text-white py-16">
-        <div className="max-w-2xl">
-          <h1 className="mb-4">{title}</h1>
-          <p className="text-xl mb-8 text-gray-100">
+        <div className="max-w-2xl animate-fade-in">
+          <h1 className="mb-6 font-bold">{title}</h1>
+          <p className="text-xl mb-10 text-gray-100 leading-relaxed">
             {subtitle}
           </p>
           <Link to={ctaLink}>
             <Button className="group btn-primary text-lg">
               {cta}
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" size={20} />
             </Button>
           </Link>
         </div>

@@ -54,17 +54,17 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				brand: {
-					50: '#f0f5ff',
-					100: '#e1ebff',
-					200: '#c9d9ff',
-					300: '#a3bafd',
-					400: '#7a94f9',
-					500: '#536ff2',
-					600: '#3b4ce4',
-					700: '#2f3bc9',
-					800: '#2a33a3',
-					900: '#283282',
-					950: '#1c1f4c',
+					50: '#f0f8ff',
+					100: '#e0f1fe',
+					200: '#bae3fd',
+					300: '#7dcefc',
+					400: '#36b8f8',
+					500: '#0ca0e4',
+					600: '#0080c4',
+					700: '#00669f',
+					800: '#035784',
+					900: '#07476e',
+					950: '#062d47',
 				},
 			},
 			borderRadius: {
@@ -88,11 +88,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'fade-out': 'fade-out 0.3s ease-out'
 			}
 		}
 	},
