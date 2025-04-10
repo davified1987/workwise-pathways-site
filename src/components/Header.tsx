@@ -28,12 +28,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/transition' },
-    { name: 'Locations', path: '/offices' },
-    { name: 'About', path: '/about' },
+    { name: 'Hem', path: '/' },
+    { name: 'Tjänster', path: '/transition' },
+    { name: 'Platser', path: '/offices' },
+    { name: 'Om', path: '/about' },
     { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Kontakt', path: '/contact' },
   ];
 
   const isActive = (path: string) => {
@@ -75,7 +75,7 @@ const Header = () => {
                   ))}
                   <Link to="/contact" onClick={closeMenu} className="mt-4">
                     <Button className="relative overflow-hidden w-full bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white rounded-full">
-                      <span className="relative z-10 flex items-center">Contact Us <ArrowRight className="ml-2 w-4 h-4" /></span>
+                      <span className="relative z-10 flex items-center">Kontakta oss <ArrowRight className="ml-2 w-4 h-4" /></span>
                       <span className="absolute bg-white/10 inset-0 scale-x-0 hover:scale-x-100 transition-transform origin-left duration-500"></span>
                     </Button>
                   </Link>
@@ -99,7 +99,7 @@ const Header = () => {
             </nav>
             <Link to="/contact">
               <Button className="button-hover-effect bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white rounded-full">
-                <span className="relative z-10 flex items-center">Get in Touch <ArrowRight className="ml-2 w-4 h-4" /></span>
+                <span className="relative z-10 flex items-center">Kontakta oss <ArrowRight className="ml-2 w-4 h-4" /></span>
               </Button>
             </Link>
           </div>

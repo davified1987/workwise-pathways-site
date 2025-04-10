@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Briefcase, LineChart, FileQuestion, ArrowRight, User, Target, Lightbulb, Repeat, Star } from 'lucide-react';
 import Hero from '@/components/Hero';
@@ -45,9 +45,9 @@ const Index = () => {
       
       <main>
         <Hero 
-          title="Redefining Career Transitions for 2025"
-          subtitle="We help individuals and organizations navigate transitions and build brighter futures through innovative employment solutions and strategic guidance."
-          cta="Explore Our Services"
+          title="Omdefinierar karriärövergångar för 2025"
+          subtitle="Vi hjälper individer och organisationer att navigera övergångar och bygga ljusare framtider genom innovativa sysselsättningslösningar och strategisk vägledning."
+          cta="Utforska våra tjänster"
           ctaLink="/transition"
           image="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
           fullHeight={true}
@@ -60,10 +60,10 @@ const Index = () => {
           
           <div className="container-custom relative z-10">
             <div className="text-center mb-16 max-w-3xl mx-auto">
-              <span className="text-orange-600 font-medium mb-2 inline-block uppercase tracking-wider text-sm">Our expertise</span>
-              <h2 className="mb-6 text-gradient">Services That Redefine Success</h2>
+              <span className="text-orange-600 font-medium mb-2 inline-block uppercase tracking-wider text-sm">Vår expertis</span>
+              <h2 className="mb-6 text-gradient">Tjänster som omdefinerar framgång</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Our comprehensive suite of transition services designed to meet the evolving needs of both job seekers and employers in 2025 and beyond.
+                Vår omfattande serie övergångstjänster utformade för att möta de utvecklande behoven hos både arbetssökande och arbetsgivare 2025 och framöver.
               </p>
             </div>
             
@@ -108,8 +108,8 @@ const Index = () => {
               </div>
               
               <div>
-                <span className="text-orange-600 font-medium mb-2 inline-block uppercase tracking-wider text-sm">About us</span>
-                <h2 className="mb-6 text-gradient">RE:SHIFT Your Career Perspective</h2>
+                <span className="text-orange-600 font-medium mb-2 inline-block uppercase tracking-wider text-sm">Om oss</span>
+                <h2 className="mb-6 text-gradient">RE:SHIFT Din karriärperspektiv</h2>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                   For over 15 years, RE:SHIFT has been at the forefront of creating innovative solutions for the modern labor market. 
                   We bridge the gap between job seekers and employers, providing specialized services that adapt to the ever-changing employment landscape.
@@ -142,7 +142,7 @@ const Index = () => {
                 
                 <Link to="/about">
                   <Button variant="outline" className="rounded-full px-6 py-3 border-2 border-orange-600 text-orange-600 hover:bg-orange-50">
-                    Learn More About Us <ArrowRight className="ml-2 w-4 h-4" />
+                    Läs mer om oss <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
               </div>
@@ -220,7 +220,7 @@ const Index = () => {
             <div className="text-center mt-12">
               <Link to="/contact">
                 <Button className="orange-gradient text-white rounded-full px-8 py-3 shadow-lg hover:shadow-xl transition-all">
-                  <span className="flex items-center">Start Your Success Story <ArrowRight className="ml-2 w-4 h-4" /></span>
+                  <span className="flex items-center">Starta din framgångssaga <ArrowRight className="ml-2 w-4 h-4" /></span>
                 </Button>
               </Link>
             </div>
@@ -241,19 +241,19 @@ const Index = () => {
           
           <div className="container-custom text-center relative z-10">
             <div className="max-w-3xl mx-auto">
-              <h2 className="mb-6 text-white">Ready To Re:Shift Your Future?</h2>
+              <h2 className="mb-6 text-white">Redo att Re:Shift din framtid?</h2>
               <p className="text-xl mb-10 text-white/90 leading-relaxed">
-                Contact us today to discuss how our services can help you or your organization navigate employment transitions in 2025's evolving landscape.
+                Kontakta oss idag för att diskutera hur våra tjänster kan hjälpa dig eller din organisation att navigera sysselsättningsövergångar i 2025 års föränderliga landskap.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact">
                   <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
-                    <span className="flex items-center">Contact Us <ArrowRight className="ml-2 w-4 h-4" /></span>
+                    <span className="flex items-center">Kontakta oss <ArrowRight className="ml-2 w-4 h-4" /></span>
                   </Button>
                 </Link>
                 <Link to="/transition">
                   <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 text-lg rounded-full">
-                    <span className="flex items-center">View Services <ArrowRight className="ml-2 w-4 h-4" /></span>
+                    <span className="flex items-center">Visa tjänster <ArrowRight className="ml-2 w-4 h-4" /></span>
                   </Button>
                 </Link>
               </div>
