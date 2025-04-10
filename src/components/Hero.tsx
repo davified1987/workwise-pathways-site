@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,14 +14,13 @@ interface HeroProps {
 const Hero = ({ 
   title, 
   subtitle, 
-  cta = "Learn More", 
+  cta = "Läs mer", 
   ctaLink = "/contact",
   image = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   fullHeight = false 
 }: HeroProps) => {
   return (
     <div className={`relative ${fullHeight ? 'min-h-[100vh]' : 'min-h-[70vh]'} flex items-center geometric-bg overflow-hidden`}>
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/60 z-10"></div>
         <img 
@@ -32,7 +30,6 @@ const Hero = ({
         />
       </div>
       
-      {/* Geometric patterns */}
       <div className="absolute inset-0 z-5 opacity-30">
         <div className="absolute top-0 right-0 w-full h-full">
           <svg className="absolute top-0 right-0 h-full w-full opacity-20" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +49,6 @@ const Hero = ({
         </div>
       </div>
       
-      {/* Content */}
       <div className="container-custom relative z-20 text-white py-16 mt-12">
         <div className="max-w-3xl space-y-6">
           <div className="fade-up">
@@ -69,23 +65,27 @@ const Hero = ({
           
           <div className="flex flex-wrap gap-4 fade-up reveal-delay-3">
             <Link to={ctaLink}>
-              <Button className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white rounded-full px-8 py-6 text-lg">
-                <span className="relative z-10 flex items-center">
+              <Button 
+                variant="default" 
+                className="bg-orange-600 text-white hover:bg-orange-700 rounded-full px-8 py-6 text-lg shadow-lg"
+              >
+                <span className="flex items-center">
                   {cta}
                   <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" size={20} />
                 </span>
-                <span className="absolute bg-white/10 inset-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
               </Button>
             </Link>
             
-            <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-2 border-white/20 hover:bg-white/10 text-white">
-              <span className="flex items-center">Discover More</span>
+            <Button 
+              variant="outline" 
+              className="rounded-full px-8 py-6 text-lg border-2 border-white/50 hover:bg-white/10 text-white"
+            >
+              <span className="flex items-center">Utforska mer</span>
             </Button>
           </div>
         </div>
       </div>
       
-      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white z-20 animate-bounce">
         <ChevronDown size={24} />
       </div>
