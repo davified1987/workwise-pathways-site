@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 346 100% 55%;
+    --primary: 6 100% 55%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -23,7 +23,7 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 14 100% 56%;
+    --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 346 100% 55%;
+    --ring: 6 100% 55%;
 
     --radius: 0.75rem;
   }
@@ -46,7 +46,7 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 346 100% 55%;
+    --primary: 6 100% 55%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 18%;
@@ -55,7 +55,7 @@
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 14 100% 56%;
+    --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -63,7 +63,7 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 346 100% 55%;
+    --ring: 6 100% 55%;
   }
 }
 
@@ -78,10 +78,10 @@
     @apply font-bold tracking-tight;
   }
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-4xl md:text-5xl lg:text-7xl;
   }
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
   }
   h3 {
     @apply text-2xl md:text-3xl;
@@ -97,15 +97,15 @@
   }
   
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-16 md:py-24 lg:py-32;
   }
   
   .btn-primary {
-    @apply bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium;
+    @apply bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-brand-600 text-brand-600 hover:bg-brand-50 px-6 py-3 rounded-lg transition-colors duration-300 font-medium;
+    @apply bg-transparent border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg transition-colors duration-300 font-medium;
   }
   
   .card-hover {
@@ -122,7 +122,7 @@
 
   .geometric-bg::before {
     @apply content-[''] absolute top-0 right-0 w-full md:w-2/3 h-full bg-contain bg-no-repeat bg-right z-[-1] opacity-20;
-    background-image: url('public/lovable-uploads/39421147-f0e7-463f-83fc-dda6687a31df.png');
+    background-image: url('public/lovable-uploads/d950bb48-0e6b-4f48-a1e5-ff1d248028fc.png');
   }
 
   .geometric-bottom {
@@ -138,7 +138,51 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 50% 100%, 25% 85%, 0 85%);
   }
 
-  .gradient-red {
-    @apply bg-gradient-to-r from-brand-600 to-coral-500;
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500;
+  }
+
+  .orange-gradient {
+    @apply bg-gradient-to-r from-orange-600 to-red-500;
+  }
+
+  .button-hover-effect {
+    @apply overflow-hidden relative;
+  }
+
+  .button-hover-effect::after {
+    @apply content-[''] absolute top-0 right-0 w-full h-full bg-white opacity-0 transition-opacity duration-300;
+  }
+
+  .button-hover-effect:hover::after {
+    @apply opacity-10;
+  }
+
+  .service-card {
+    @apply bg-white rounded-2xl p-8 shadow-lg border border-gray-50 hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+
+  .service-card-highlight {
+    @apply absolute top-0 right-0 w-24 h-24 opacity-10 bg-orange-500 -mr-8 -mt-8 rounded-full;
+  }
+
+  .service-icon {
+    @apply text-orange-600 mb-5 p-4 inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 relative z-10;
+  }
+
+  .link-underline {
+    @apply inline-flex items-center relative overflow-hidden group-hover:text-orange-700;
+  }
+
+  .link-underline::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 group-hover:w-full transition-all duration-300;
+  }
+
+  .link-arrow {
+    @apply ml-2 group-hover:translate-x-2 transition-transform duration-300;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-2xl border border-gray-100 transition-all hover:-translate-y-1 hover:shadow-xl;
   }
 }

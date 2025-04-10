@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Lightbulb, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 
@@ -29,9 +29,9 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Transition', path: '/transition' },
-    { name: 'Our Offices', path: '/offices' },
-    { name: 'About Us', path: '/about' },
+    { name: 'Services', path: '/transition' },
+    { name: 'Locations', path: '/offices' },
+    { name: 'About', path: '/about' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -43,7 +43,11 @@ const Header = () => {
   return (
     <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex justify-between items-center">
-        <Link to="/" className="font-bold text-2xl text-brand-600">WorkWise</Link>
+        <Link to="/" className="font-bold text-2xl text-orange-600 flex items-center group">
+          <span className="mr-2 bg-orange-600 text-white p-1 rounded-md">RE:</span>
+          <span className="text-gradient">SHIFT</span>
+          <Lightbulb className="ml-2 w-5 h-5 text-orange-500 group-hover:rotate-12 transition-transform" />
+        </Link>
         
         {isMobile ? (
           <div className="flex items-center">
@@ -52,7 +56,7 @@ const Header = () => {
               aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
               className="p-2"
             >
-              {isMenuOpen ? <X size={24} className="text-brand-600" /> : <Menu size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />}
+              {isMenuOpen ? <X size={24} className="text-orange-600" /> : <Menu size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />}
             </button>
 
             {isMenuOpen && (
@@ -62,16 +66,16 @@ const Header = () => {
                     <Link 
                       key={item.name}
                       to={item.path}
-                      className={`py-2 text-lg font-medium relative group ${isActive(item.path) ? 'text-brand-600' : 'text-gray-800'}`}
+                      className={`py-2 text-lg font-medium relative group ${isActive(item.path) ? 'text-orange-600' : 'text-gray-800'}`}
                       onClick={closeMenu}
                     >
                       <span>{item.name}</span>
-                      <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
+                      <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
                     </Link>
                   ))}
                   <Link to="/contact" onClick={closeMenu} className="mt-4">
-                    <Button className="relative overflow-hidden w-full bg-gradient-to-r from-brand-600 to-coral-500 hover:from-brand-700 hover:to-coral-600 text-white rounded-full">
-                      <span className="relative z-10">Contact Us</span>
+                    <Button className="relative overflow-hidden w-full bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white rounded-full">
+                      <span className="relative z-10 flex items-center">Contact Us <ArrowRight className="ml-2 w-4 h-4" /></span>
                       <span className="absolute bg-white/10 inset-0 scale-x-0 hover:scale-x-100 transition-transform origin-left duration-500"></span>
                     </Button>
                   </Link>
@@ -86,17 +90,16 @@ const Header = () => {
                 <Link 
                   key={item.name}
                   to={item.path}
-                  className={`py-2 relative font-medium group ${isActive(item.path) ? 'text-brand-600' : isScrolled ? 'text-gray-800' : 'text-white'}`}
+                  className={`py-2 relative font-medium text-sm uppercase tracking-wider group ${isActive(item.path) ? 'text-orange-600' : isScrolled ? 'text-gray-800' : 'text-white'}`}
                 >
                   <span>{item.name}</span>
-                  <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
+                  <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
                 </Link>
               ))}
             </nav>
             <Link to="/contact">
-              <Button className="relative overflow-hidden bg-gradient-to-r from-brand-600 to-coral-500 hover:from-brand-700 hover:to-coral-600 text-white rounded-full">
-                <span className="relative z-10">Contact Us</span>
-                <span className="absolute bg-white/10 inset-0 scale-x-0 hover:scale-x-100 transition-transform origin-left duration-500"></span>
+              <Button className="button-hover-effect bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white rounded-full">
+                <span className="relative z-10 flex items-center">Get in Touch <ArrowRight className="ml-2 w-4 h-4" /></span>
               </Button>
             </Link>
           </div>
