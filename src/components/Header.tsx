@@ -52,7 +52,7 @@ const Header = () => {
               aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
               className="p-2"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={24} className="text-brand-600" /> : <Menu size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />}
             </button>
 
             {isMenuOpen && (
@@ -62,14 +62,18 @@ const Header = () => {
                     <Link 
                       key={item.name}
                       to={item.path}
-                      className={`py-2 text-lg font-medium ${isActive(item.path) ? 'text-brand-600' : 'text-gray-800'}`}
+                      className={`py-2 text-lg font-medium relative group ${isActive(item.path) ? 'text-brand-600' : 'text-gray-800'}`}
                       onClick={closeMenu}
                     >
-                      {item.name}
+                      <span>{item.name}</span>
+                      <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
                     </Link>
                   ))}
-                  <Link to="/contact" onClick={closeMenu}>
-                    <Button className="btn-primary w-full mt-6">Contact Us</Button>
+                  <Link to="/contact" onClick={closeMenu} className="mt-4">
+                    <Button className="relative overflow-hidden w-full bg-gradient-to-r from-brand-600 to-coral-500 hover:from-brand-700 hover:to-coral-600 text-white rounded-full">
+                      <span className="relative z-10">Contact Us</span>
+                      <span className="absolute bg-white/10 inset-0 scale-x-0 hover:scale-x-100 transition-transform origin-left duration-500"></span>
+                    </Button>
                   </Link>
                 </nav>
               </div>
@@ -84,13 +88,16 @@ const Header = () => {
                   to={item.path}
                   className={`py-2 relative font-medium group ${isActive(item.path) ? 'text-brand-600' : isScrolled ? 'text-gray-800' : 'text-white'}`}
                 >
-                  {item.name}
+                  <span>{item.name}</span>
                   <span className={`absolute left-0 bottom-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full ${isActive(item.path) ? 'w-full' : 'w-0'}`}></span>
                 </Link>
               ))}
             </nav>
             <Link to="/contact">
-              <Button className="btn-primary">Contact Us</Button>
+              <Button className="relative overflow-hidden bg-gradient-to-r from-brand-600 to-coral-500 hover:from-brand-700 hover:to-coral-600 text-white rounded-full">
+                <span className="relative z-10">Contact Us</span>
+                <span className="absolute bg-white/10 inset-0 scale-x-0 hover:scale-x-100 transition-transform origin-left duration-500"></span>
+              </Button>
             </Link>
           </div>
         )}

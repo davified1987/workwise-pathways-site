@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gray-900 text-white pt-16 pb-8 geometric-bottom">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
@@ -30,20 +30,38 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white">Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/transition" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">Rusta & Matcha</Link></li>
-              <li><Link to="/transition" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">Labor Market Projects</Link></li>
-              <li><Link to="/transition" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">Career Guidance</Link></li>
-              <li><Link to="/transition" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">Outplacement</Link></li>
+              {[
+                { name: 'Rusta & Matcha', path: '/transition' },
+                { name: 'Labor Market Projects', path: '/transition' },
+                { name: 'Career Guidance', path: '/transition' },
+                { name: 'Outplacement', path: '/transition' }
+              ].map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path} className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1 relative group">
+                    <span>{item.name}</span>
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-brand-400 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-bold mb-6 text-white">Company</h4>
             <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">About Us</Link></li>
-              <li><Link to="/offices" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">Our Offices</Link></li>
-              <li><Link to="/faq" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">FAQ</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1">Contact Us</Link></li>
+              {[
+                { name: 'About Us', path: '/about' },
+                { name: 'Our Offices', path: '/offices' },
+                { name: 'FAQ', path: '/faq' },
+                { name: 'Contact Us', path: '/contact' }
+              ].map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path} className="text-gray-300 hover:text-brand-300 transition-colors inline-block pb-1 relative group">
+                    <span>{item.name}</span>
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-brand-400 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
