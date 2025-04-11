@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, Lightbulb, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 
@@ -41,19 +41,12 @@ const Header = () => {
   };
 
   return (
-    <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex justify-between items-center">
-        <Link 
-          to="/" 
-          className="flex items-center group transition-all duration-300 hover:scale-[1.02]"
-        >
-          <div className={`p-2 rounded-lg transition-all duration-300 ${isScrolled ? 'bg-transparent' : 'bg-white/80 backdrop-blur-sm'}`}>
-            <img 
-              src="/lovable-uploads/4e552354-b8f6-4435-8d53-81b93334ff31.png" 
-              alt="Reshift Logo" 
-              className="h-28 md:h-36 w-auto object-contain transition-all duration-300" 
-            />
-          </div>
+        <Link to="/" className="font-bold text-2xl text-orange-600 flex items-center group">
+          <span className="mr-2 bg-orange-600 text-white p-1 rounded-md">RE:</span>
+          <span className="text-gradient">SHIFT</span>
+          <Lightbulb className="ml-2 w-5 h-5 text-orange-500 group-hover:rotate-12 transition-transform" />
         </Link>
         
         {isMobile ? (
