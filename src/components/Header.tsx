@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Lightbulb, ArrowRight } from 'lucide-react';
@@ -42,11 +43,14 @@ const Header = () => {
   return (
     <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex justify-between items-center">
-        <Link to="/" className="flex items-center group">
+        <Link 
+          to="/" 
+          className="flex items-center group transition-all duration-300 hover:scale-[1.02]"
+        >
           <img 
-            src="/lovable-uploads/reshift-logo.png" 
+            src="/lovable-uploads/8cccf5fc-e361-4eb5-b011-322a5b2a8de0.png" 
             alt="Reshift Logo" 
-            className="h-12 md:h-14 object-contain transition-all duration-300 group-hover:scale-105 group-hover:opacity-80" 
+            className="h-16 md:h-20 w-auto object-contain transition-all duration-300 drop-shadow-md" 
           />
         </Link>
         
