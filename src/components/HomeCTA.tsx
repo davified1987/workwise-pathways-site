@@ -25,12 +25,12 @@ const HomeCTA = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
-              <Button className="bg-white text-orange-600 hover:bg-orange-100 px-8 py-3 text-lg rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl">
+              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                 <span className="flex items-center">Kontakta oss <ArrowRight className="ml-2 w-4 h-4" /></span>
               </Button>
             </Link>
             <Link to="/transition">
-              <Button variant="default" className="bg-orange-600 text-white hover:bg-orange-700 px-8 py-3 text-lg rounded-full shadow-lg transition-all duration-300 hover:shadow-xl">
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 text-lg rounded-full">
                 <span className="flex items-center">Visa tjänster <ArrowRight className="ml-2 w-4 h-4" /></span>
               </Button>
             </Link>
