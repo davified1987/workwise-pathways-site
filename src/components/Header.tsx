@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
@@ -49,7 +50,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/4e552354-b8f6-4435-8d53-81b93334ff31.png" 
             alt="Reshift Logo" 
-            className="h-16 md:h-20 w-auto object-contain transition-all duration-300 hover:opacity-80" 
+            className="h-24 md:h-28 w-auto object-contain transition-all duration-300 hover:opacity-80" 
           />
         </Link>
         
