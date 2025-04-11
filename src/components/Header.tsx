@@ -36,7 +36,7 @@ const Header = () => {
     { name: 'Kontakt', path: '/contact' },
   ];
 
-  const isActive = (path: string) => {
+  const isActive = (path) => {
     return location.pathname === path;
   };
 
@@ -44,8 +44,8 @@ const Header = () => {
     <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex justify-between items-center">
         <Link to="/" className="font-bold text-2xl text-orange-600 flex items-center group">
-          <span className="mr-2 bg-orange-600 text-white p-1 rounded-md">RE:</span>
-          <span className="text-gradient">SHIFT</span>
+          <div className={`mr-2 bg-orange-600 text-white p-1 rounded-md ${isScrolled ? '' : 'bg-opacity-90'}`}>RE:</div>
+          <span className={`text-gradient ${isScrolled ? '' : 'text-white'}`}>SHIFT</span>
           <Lightbulb className="ml-2 w-5 h-5 text-orange-500 group-hover:rotate-12 transition-transform" />
         </Link>
         

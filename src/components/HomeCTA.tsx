@@ -8,14 +8,16 @@ const HomeCTA = () => {
   return (
     <section className="orange-gradient text-white py-20 relative overflow-hidden">
       {/* Geometric pattern overlay */}
-      <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
-        </pattern>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-        <circle cx="500" cy="300" r="200" stroke="white" strokeWidth="2" fill="none" opacity="0.4" />
-        <circle cx="500" cy="300" r="300" stroke="white" strokeWidth="2" fill="none" opacity="0.2" />
-      </svg>
+      <div className="absolute inset-0 w-full h-full opacity-10">
+        <svg className="w-full h-full" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+          <circle cx="500" cy="300" r="200" stroke="white" strokeWidth="2" fill="none" opacity="0.4" />
+          <circle cx="500" cy="300" r="300" stroke="white" strokeWidth="2" fill="none" opacity="0.2" />
+        </svg>
+      </div>
       
       <div className="container-custom text-center relative z-10">
         <div className="max-w-3xl mx-auto">
