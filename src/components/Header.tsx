@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Lightbulb, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 
@@ -48,7 +48,7 @@ const Header = () => {
           className="flex items-center group transition-all duration-300 hover:scale-[1.02]"
         >
           <img 
-            src="/lovable-uploads/6db57f5b-6f0c-4acc-b6f7-eb3277ac61ab.png" 
+            src="/lovable-uploads/4e552354-b8f6-4435-8d53-81b93334ff31.png" 
             alt="Reshift Logo" 
             className="h-10 md:h-12 w-auto object-contain transition-all duration-300 hover:opacity-80" 
           />
