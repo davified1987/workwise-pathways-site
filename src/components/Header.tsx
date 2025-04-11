@@ -46,7 +46,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/reshift-logo.png" 
             alt="Reshift Logo" 
-            className="h-10 mr-2" 
+            className="h-12 md:h-14 object-contain transition-all duration-300 group-hover:scale-105 group-hover:opacity-80" 
           />
         </Link>
         
