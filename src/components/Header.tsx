@@ -41,17 +41,19 @@ const Header = () => {
   };
 
   return (
-    <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <header className={`py-4 fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex justify-between items-center">
         <Link 
           to="/" 
           className="flex items-center group transition-all duration-300 hover:scale-[1.02]"
         >
-          <img 
-            src="/lovable-uploads/4e552354-b8f6-4435-8d53-81b93334ff31.png" 
-            alt="Reshift Logo" 
-            className="h-28 md:h-36 w-auto object-contain transition-all duration-300 hover:opacity-80" 
-          />
+          <div className={`p-2 rounded-lg transition-all duration-300 ${isScrolled ? 'bg-transparent' : 'bg-white/80 backdrop-blur-sm'}`}>
+            <img 
+              src="/lovable-uploads/4e552354-b8f6-4435-8d53-81b93334ff31.png" 
+              alt="Reshift Logo" 
+              className="h-28 md:h-36 w-auto object-contain transition-all duration-300" 
+            />
+          </div>
         </Link>
         
         {isMobile ? (
