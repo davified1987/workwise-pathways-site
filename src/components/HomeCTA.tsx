@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const HomeCTA = () => {
   return (
-    <section className="orange-gradient text-white py-20 relative overflow-hidden">
+    <section className="dark-blue-gradient text-white py-20 relative overflow-hidden">
       {/* Geometric pattern overlay */}
       <div className="absolute inset-0 w-full h-full opacity-10">
         <svg className="w-full h-full" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@ const HomeCTA = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
-              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+              <Button className="bg-white text-darkBlue hover:bg-gray-100 px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                 <span className="flex items-center">Kontakta oss <ArrowRight className="ml-2 w-4 h-4" /></span>
               </Button>
             </Link>
