@@ -7,6 +7,7 @@ import HomeServices from '@/components/HomeServices';
 import HomeAbout from '@/components/HomeAbout';
 import SuccessStories from '@/components/SuccessStories';
 import HomeCTA from '@/components/HomeCTA';
+import BlueSection from '@/components/BlueSection';
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
         
         <HomeServices />
         <HomeAbout />
+        <BlueSection />
         <SuccessStories />
         <HomeCTA />
       </main>
