@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const BlueSection = () => {
   return (
-    <section className="py-24 bg-[#0EA5E9] relative overflow-hidden">
+    <section className="py-24 bg-[#0A2540] relative overflow-hidden"> {/* Changed from #0EA5E9 to a darker blue */}
       {/* Geometric pattern overlay */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute top-0 right-0 w-full h-full opacity-10">
@@ -30,7 +30,7 @@ const BlueSection = () => {
                 I dagens snabbt föränderliga arbetsmiljö behöver du en partner som förstår morgondagens krav. Våra digitala verktyg och expertrådgivning hjälper dig att navigera din karriärresa med precision.
               </p>
               <Link to="/contact">
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full">
+                <Button className="bg-white text-blue-900 hover:bg-blue-50 px-6 py-3 rounded-full">
                   <span className="flex items-center">Boka konsultation <ArrowRight className="ml-2 w-4 h-4" /></span>
                 </Button>
               </Link>
