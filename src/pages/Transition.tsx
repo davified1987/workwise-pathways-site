@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import BlueSection from '@/components/BlueSection';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -32,9 +31,6 @@ const Transition = () => {
             </div>
           </div>
         </section>
-        
-        {/* Blue Section - FirstMind-inspired section */}
-        <BlueSection />
         
         {/* Rusta & Matcha */}
         <section className="py-16 bg-gray-50">
